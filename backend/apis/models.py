@@ -24,6 +24,6 @@ class OfficeBookingsModel(models.Model):
     user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
     date = models.DateField()
 
-class DailyRoomBookings(models.Model):
-   user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
-   room_id = models.ForeignKey(RoomsModel, on_delete=models.CASCADE) #to be found
+# class DailyRoomBookings(models.Model):
+#    user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
+#    room_id = models.ForeignKey(RoomsModel, on_delete=models.CASCADE) #to be found
