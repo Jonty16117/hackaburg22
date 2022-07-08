@@ -2,12 +2,35 @@
 from rest_framework import serializers
  
 # import model from models.py
-# from .models import GeeksModel
+from .models import UsersModel, FoodsModel, RoomsModel, ParkingsModel, OfficeBookingsModel
  
 # Create a model serializer
-class ApiSerializer(serializers.HyperlinkedModelSerializer):
+class UsersSerializer(serializers.ModelSerializer):
     # specify model and fields
     class Meta:
-        # model = GeeksModel
-        # fields = ('title', 'description')
-        pass
+        model = UsersModel
+        fields = ['id','username', 'email','password']
+
+class FoodsSerializer(serializers.HyperlinkedModelSerializer):
+    # specify model and fields
+    class Meta:
+        model = FoodsModel
+        fields = ('id','user_id', 'food_id')
+
+class RoomsSerializer(serializers.HyperlinkedModelSerializer):
+    # specify model and fields
+    class Meta:
+        model = RoomsModel
+        fields = ('id', 'room_no','room_capacity')
+
+class ParkingsSerializer(serializers.HyperlinkedModelSerializer):
+    # specify model and fields
+    class Meta:
+        model = ParkingsModel
+        fields = ('id','user_id','need_parking','date')
+
+class OfficeBookingsSerializer(serializers.HyperlinkedModelSerializer):
+    # specify model and fields
+    class Meta:
+        model = OfficeBookingsModel
+        fields = ('id','user_id', 'date')
