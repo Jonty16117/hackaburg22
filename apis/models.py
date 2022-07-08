@@ -13,8 +13,8 @@ class FoodsModel(models.Model):
 class RoomsModel(models.Model):
     room_no = models.IntegerField()
     room_capacity = models.IntegerField()
-    #daily_status = models.IntegerField() #needs to be updated
     energy =  models.IntegerField()
+    #daily_status = models.IntegerField() #needs to be updated
 
 class ParkingsModel(models.Model):
     user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)

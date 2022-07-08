@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
             name='FoodsModel',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('food_id', models.IntegerField()),
+                ('food_type', models.IntegerField()),
                 ('user_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='apis.usersmodel')),
             ],
         ),

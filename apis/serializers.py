@@ -15,7 +15,7 @@ class FoodsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = FoodsModel
-        fields = ('id','user_id', 'food_id')
+        fields = ('id','user_id', 'food_type')
 
 class RoomsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
