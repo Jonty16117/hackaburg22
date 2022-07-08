@@ -7,7 +7,8 @@ class UsersModel(models.Model):
 
 class FoodsModel(models.Model):
     user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
-    food_id = models.IntegerField()
+    food_type = models.CharField(max_length = 200)
+
 
 class RoomsModel(models.Model):
     room_no = models.IntegerField()
