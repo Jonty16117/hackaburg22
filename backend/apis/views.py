@@ -8,7 +8,7 @@ def listusers(request):
     users = UsersModel.objects.all()
     serializer = UsersSerializer(users, many=True)
 
-    return JsonResponse(serializer.data, safe=False)
+    return JsonResponse({'drinks':serializer.data})
 
  
 # # import local data
