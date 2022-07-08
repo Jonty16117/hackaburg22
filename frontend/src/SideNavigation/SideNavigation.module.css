@@ -1,0 +1,32 @@
+.root {
+  background-color: lightgrey;
+}
+
+.option {
+  padding-block: 20px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.option:hover {
+  opacity: 90%;
+  background: rgba(255, 255, 255, 0.733);
+  transition: ease-in-out 0.3s;
+  color: black;
+}
+
+.option-selected {
+  padding-block: 20px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  opacity: 70%;
+  background: rgba(255, 255, 255, 0.733);
+  transition: ease-in-out 0.3s;
+}
+
+.option-selected:hover {
+  transition: ease-in-out 0.3s;
+  color: black;
+}

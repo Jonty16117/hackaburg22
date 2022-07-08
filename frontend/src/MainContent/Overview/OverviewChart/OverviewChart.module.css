@@ -1,0 +1,8 @@
+.root {
+  background-color: rgba(255, 243, 109, 0.769);
+  height: min-content;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 14px!;
+  font-size: smaller;
+}
