@@ -1,1 +1,1 @@
-web: gunicorn hackaburg22.wsgi
+web: gunicorn backend.wsgi
