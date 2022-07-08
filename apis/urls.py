@@ -2,7 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from apis.views import UsersViewSet, FoodsViewSet, RoomsViewSet, ParkingsViewSet, OfficeBookingsViewSet, RoomAllocatorViewSet
+from apis.views import UsersViewSet, FoodsViewSet, RoomsViewSet, ParkingsViewSet, OfficeBookingsViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UsersViewSet)
