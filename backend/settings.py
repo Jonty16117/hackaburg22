@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1'
-    'backend.herokuapp.com'
+    'hackaburg22.herokuapp.com'
 ]
 
 
