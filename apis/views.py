@@ -4,6 +4,7 @@ from rest_framework import viewsets
 from .serializers import UsersSerializer, FoodsSerializer, RoomsSerializer, ParkingsSerializer, OfficeBookingsSerializer
 from .models import UsersModel, FoodsModel, RoomsModel, ParkingsModel, OfficeBookingsModel
  
+
 class UsersViewSet(viewsets.ModelViewSet):
     # define queryset
     queryset = UsersModel.objects.all()
@@ -38,3 +39,7 @@ class OfficeBookingsViewSet(viewsets.ModelViewSet):
      
     # specify serializer to be used
     serializer_class = OfficeBookingsSerializer
+
+#class TotalUsersViewSet(viewsets.ModelViewSet):
+
+    

@@ -8,6 +8,7 @@ class UsersModel(models.Model):
 class FoodsModel(models.Model):
     user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
     food_type = models.CharField(max_length = 200)
+    date = models.DateField()
 
 
 class RoomsModel(models.Model):
@@ -28,3 +29,6 @@ class OfficeBookingsModel(models.Model):
 # class DailyRoomBookings(models.Model):
 #    user_id = models.ForeignKey(UsersModel, on_delete=models.CASCADE)
 #    room_id = models.ForeignKey(RoomsModel, on_delete=models.CASCADE) #to be found
+
+class TotalUsersModel(models.Model):
+    number = models.IntegerField()
