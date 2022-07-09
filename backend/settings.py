@@ -28,10 +28,7 @@ DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'hackaburg22.herokuapp.com',
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
