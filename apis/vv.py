@@ -86,13 +86,13 @@ def rooms_today(request):
     nb_users=len(q)
     capacities, names=room_attr()
     room_inds = optimal_choice(capacities,nb_users)
-    qs = dict()
-    qs["room_names"]=[]
+    #qs = dict()
+    #qs["room_names"]=[]
 
-    for i in range(room_inds):
-        qs["room_names"].append(names[i])
+    #for i in range(room_inds):
+    #    qs["room_names"].append(names[i])
     
-    return JsonResponse(qs)
+    return JsonResponse({"nb_used_rooms":len(room_inds)})
 
 def energy_used_today(request):
     q = OfficeBookingsModel.objects.filter(date=date.today())
