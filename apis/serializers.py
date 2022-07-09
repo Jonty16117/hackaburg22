@@ -21,7 +21,7 @@ class RoomsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = RoomsModel
-        fields = ('id', 'room_no','room_capacity')
+        fields = ('id', 'room_no','room_capacity','energy')
 
 class ParkingsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
