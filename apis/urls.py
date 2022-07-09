@@ -20,5 +20,6 @@ urlpatterns = [
    path('parking/', parking),
    path('diets_today/', diets_today),
    path('allocate_rooms/',allocate_rooms),
+   path('rooms_today/',rooms_today),
 ]
 #urlpatterns = format_suffix_patterns(urlpatterns)
