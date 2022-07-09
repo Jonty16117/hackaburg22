@@ -2,7 +2,7 @@
 from rest_framework import serializers
  
 # import model from models.py
-from .models import UsersModel, FoodsModel, RoomsModel, ParkingsModel, OfficeBookingsModel
+from .models import UsersModel, FoodsModel, RoomsModel, ParkingsModel, OfficeBookingsModel, DailyRoomBookingsModel
  
 # Create a model serializer
 class UsersSerializer(serializers.ModelSerializer):
@@ -15,22 +15,28 @@ class FoodsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = FoodsModel
-        fields = ('id','user_id', 'food_id')
+        fields = ['id','user_id', 'food_id']
 
 class RoomsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = RoomsModel
-        fields = ('id', 'room_no','room_capacity')
+        fields = ['id', 'room_name','room_capacity','energy']
 
 class ParkingsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = ParkingsModel
-        fields = ('id','user_id','need_parking','date')
+        fields = ['id','user_id','need_parking','date']
 
 class OfficeBookingsSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = OfficeBookingsModel
-        fields = ('id','user_id', 'date')
+        fields = ['id','user_id', 'date']
+
+class DailyRoomBookingsSerializer(serializers.HyperlinkedModelSerializer):
+    # specify model and fields
+    class Meta:
+        model = DailyRoomBookingsModel
+        fields = ['id','user_id', 'room_id']
