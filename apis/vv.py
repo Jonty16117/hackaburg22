@@ -84,8 +84,9 @@ def allocate_rooms(request):
 def rooms_today(request):
     q = OfficeBookingsModel.objects.filter(date=date.today())
     nb_users=len(q)
-    capacities, names=room_attr()
+    capacities, e,names=room_attr()
     room_inds = optimal_choice(capacities,nb_users)
+    #print(room_inds)
     #qs = dict()
     #qs["room_names"]=[]
 
